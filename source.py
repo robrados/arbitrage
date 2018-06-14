@@ -2,7 +2,7 @@ import json
 
 
 def get_sources():
-    json.loads(Source.file, object_hook=Source.as_sources)
+    json.loads(Source.file, object_hook=__as_sources)
 
 
 def __as_sources(obj):
