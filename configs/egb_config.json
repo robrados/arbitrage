@@ -1,18 +1,32 @@
 {
-  "source":
-  {
-    "url": "",
-    "home" : "(//*[@class='table-bets__player1']/child::*[not(@src)])['+str(i)+']",
-    "guest" : "(//*[@class='table-bets__player2']/child::*[not(@src)])['+str(i)+']",
-    "homeQuote" : "(//*[@class='table-bets__player1']/following-sibling::*/child::*)['+str(i)+']",
-    "guestQuote" : "(//*[@class='table-bets__player2']/following-sibling::*/child::*)['+str(i)+']"
+  "source": {
+    "url": "https://egb.com/play/simple_bets",
+    "home": "(//*[@class='table-bets__player1']/child::*[not(@src)])['+str(i)+']",
+    "guest": "(//*[@class='table-bets__player2']/child::*[not(@src)])['+str(i)+']",
+    "homeQuote": "(//*[@class='table-bets__player1']/following-sibling::*/child::*)['+str(i)+']",
+    "guestQuote": "(//*[@class='table-bets__player2']/following-sibling::*/child::*)['+str(i)+']",
+    "init": {
+      "single_click": [
+        "*//button[@class='filters__link-clear']"
+      ],
+      "double_click": [
+        "*//input[@type='checkbox']"
+      ]
+    }
   },
-  "source":
-  {
-    "url": "",
-    "home" : "(//*[@class='table-bets__player1']/child::*[not(@src)])['+str(i)+']",
-    "guest" : "(//*[@class='table-bets__player2']/child::*[not(@src)])['+str(i)+']",
-    "homeQuote" : "(//*[@class='table-bets__player1']/following-sibling::*/child::*)['+str(i)+']",
-    "guestQuote" : "(//*[@class='table-bets__player2']/following-sibling::*/child::*)['+str(i)+']"
+  "source": {
+    "url": "https://www.bet365.com/#/AS/B151/",
+    "home": "",
+    "guest": "",
+    "homeQuote": "",
+    "guestQuote": "",
+    "init": {
+      "single_click": [
+        "*//button[@class='filters__link-clear']"
+      ],
+      "double_click": [
+        "*//input[@type='checkbox']"
+      ]
+    }
   }
 }
