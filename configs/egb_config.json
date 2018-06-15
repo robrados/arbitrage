@@ -1,0 +1,18 @@
+{
+  "source":
+  {
+    "url": "",
+    "home" : "(//*[@class='table-bets__player1']/child::*[not(@src)])['+str(i)+']",
+    "guest" : "(//*[@class='table-bets__player2']/child::*[not(@src)])['+str(i)+']",
+    "homeQuote" : "(//*[@class='table-bets__player1']/following-sibling::*/child::*)['+str(i)+']",
+    "guestQuote" : "(//*[@class='table-bets__player2']/following-sibling::*/child::*)['+str(i)+']"
+  },
+  "source":
+  {
+    "url": "",
+    "home" : "(//*[@class='table-bets__player1']/child::*[not(@src)])['+str(i)+']",
+    "guest" : "(//*[@class='table-bets__player2']/child::*[not(@src)])['+str(i)+']",
+    "homeQuote" : "(//*[@class='table-bets__player1']/following-sibling::*/child::*)['+str(i)+']",
+    "guestQuote" : "(//*[@class='table-bets__player2']/following-sibling::*/child::*)['+str(i)+']"
+  }
+}
