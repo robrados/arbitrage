@@ -1,29 +1,34 @@
-import csv, time, pandas as pd, matplotlib.pyplot as plt, numpy as np, keyboard, pyautogui, pyperclip, re, lxml
-
-from selenium import webdriver
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
-
 from match import Match
+from data import source, source_util
+from scraper.SeleniumFunctions import *
+import selenium
 
-url = "https://egb.com/play/simple_bets"
-
-driver = webdriver.Chrome()
+## start selenium session
+driver = Driver()
 driver.maximize_window()
 
-driver.get(url)
+__sources = source_util.get_sources()
 
-time.sleep(5)
-matches = []
+for s in __sources:
+    driver.get(s.url)
 
-for i in range(1,20):
+    time.sleep(5)
+    matches = []
+    config = ["ebg_config.json"]
+
+    ## scraper
+
     p1 = driver.find_element_by_xpath("(//*[@class='table-bets__player1']/child::*[not(@src)])["+str(i)+"]").get_attribute("title")
     p2 = driver.find_element_by_xpath("(//*[@class='table-bets__player2']/child::*[not(@src)])["+str(i)+"]").get_attribute("title")
-    m = Match(p1, p2)
+    q1 = driver.find_element_by_xpath("(//*[@class='table-bets__player1']/following-sibling::*/child::*)["+str(i)+"]").text
+    q2 = driver.find_element_by_xpath("(//*[@class='table-bets__player2']/following-sibling::*/child::*)["+str(i)+"]").text
+    m = Match(p1, p2, q1, q2)
     matches.append(m)
 
-print("test print : " + matches[0].player2)
+    print(Match)
+    print("test print : " + matches[0].player2)
 
-for m in matches:
-    print(m)
+    driver.close()
+
+    for m in matches:
+        print(m)

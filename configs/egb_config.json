@@ -1,32 +1,26 @@
 {
   "source": {
     "url": "https://egb.com/play/simple_bets",
+    "quantity": "//*[@class='table-bets__player1']/child::*[not(@src)]",
     "home": "(//*[@class='table-bets__player1']/child::*[not(@src)])['+str(i)+']",
     "guest": "(//*[@class='table-bets__player2']/child::*[not(@src)])['+str(i)+']",
     "homeQuote": "(//*[@class='table-bets__player1']/following-sibling::*/child::*)['+str(i)+']",
     "guestQuote": "(//*[@class='table-bets__player2']/following-sibling::*/child::*)['+str(i)+']",
     "init": {
-      "single_click": [
-        "*//button[@class='filters__link-clear']"
-      ],
-      "double_click": [
-        "*//input[@type='checkbox']"
-      ]
+      "single_click": "*//button[@class='filters__link-clear']",
+      "multiple_click": "*//input[@type='checkbox']"
     }
   },
   "source": {
     "url": "https://www.bet365.com/#/AS/B151/",
-    "home": "",
-    "guest": "",
-    "homeQuote": "",
-    "guestQuote": "",
+    "quantity": "//*[@class='gl-MarketExtraData gl-Market_General gl-Market_PWidth-100 gl-Market_LastInRow ']/child::*[1]/child::*[@class='gl-Participant_Name']",
+    "home": "(//*[@class='gl-MarketExtraData gl-Market_General gl-Market_PWidth-100 gl-Market_LastInRow ']/child::*[1]/child::*[@class='gl-Participant_Name'])['+str(i)+']",
+    "guest": "(//*[@class='gl-MarketExtraData gl-Market_General gl-Market_PWidth-100 gl-Market_LastInRow ']/child::*[2]/child::*[@class='gl-Participant_Name'])['+str(i)+']",
+    "homeQuote": "(//*[@class='gl-MarketExtraData gl-Market_General gl-Market_PWidth-100 gl-Market_LastInRow ']/child::*[1]/child::*[@class='gl-Participant_Odds'])['+str(i)+']",
+    "guestQuote": "(//*[@class='gl-MarketExtraData gl-Market_General gl-Market_PWidth-100 gl-Market_LastInRow ']/child::*[2]/child::*[@class='gl-Participant_Odds'])['+str(i)+']",
     "init": {
-      "single_click": [
-        "*//button[@class='filters__link-clear']"
-      ],
-      "double_click": [
-        "*//input[@type='checkbox']"
-      ]
+      "multiple_click": "//*[@class='sm-CouponLinkSelectable_Checkbox ' and following-sibling::*[text() = 'Sieger (2 Optionen)']]",
+      "single_click": "//*[@class='sm-CreateCouponTab_Button ']"
     }
   }
 }

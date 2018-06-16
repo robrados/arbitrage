@@ -12,7 +12,7 @@ def get_sources():
 
 def __as_sources(dct):
     if 'url' in dct:
-        __sources.append(Source(dct['url'], dct['home'], dct['guest'], dct['homeQuote'], dct['guestQuote']))
+        __sources.append(Source(dct['url'], dct['quantity'], dct['home'], dct['guest'], dct['homeQuote'], dct['guestQuote']))
 
 
 get_sources()
